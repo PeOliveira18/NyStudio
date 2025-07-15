@@ -19,7 +19,7 @@ function Header() {
                 </nav>
             </div>
             <div className="">
-                <button>AGENDE HORARIO</button>
+                <button className="btn-consulta px-5 hover:opacity-80">AGENDE HORARIO</button>
             </div>
         </header>
     );
