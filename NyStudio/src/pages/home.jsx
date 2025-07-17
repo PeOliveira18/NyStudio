@@ -28,11 +28,11 @@ function Home() {
                 <h1 className="mt-5">Somos um grupo de psicólogos e psiquiatras doutorados e prestamos ótimos serviços de cuidados de saúde mental. Por ser um coletivo de saúde mental, fornecemos terapia, gerenciamento de medicamentos, coaching e muito mais aos nossos membros. Conheça um dos nossos médicos para receber os devidos cuidados em um atendimento presencial ou on-line.</h1>
                 <button className="btn-preto mt-10">SAIBA MAIS</button>
             </div>
-            <FotoTexto title={"Disponibilizamos um espaço seguro e confortável"} subtitle={"Todos os atendimentos são realizados em nosso espaço reconfortante de salas totalmente privadas, com chá e água de cortesia e cuidados personalizados."} image={foto}/>
-            <FotoTexto showMap title={"Opções presenciais e remotas"} subtitle={"Nosso escritório encontra-se em Manhattan. Não consegue comparecer pessoalmente? Não se preocupe, oferecemos serviços de terapia on-line."} reverse={"flex-row-reverse"}/>
+            <FotoTexto title={"Disponibilizamos um espaço seguro e confortável"} subtitle={"Todos os atendimentos são realizados em nosso espaço reconfortante de salas totalmente privadas, com chá e água de cortesia e cuidados personalizados."} image={foto} w={"w-[430px]"}/>
+            <FotoTexto showMap title={"Opções presenciais e remotas"} subtitle={"Nosso escritório encontra-se em Manhattan. Não consegue comparecer pessoalmente? Não se preocupe, oferecemos serviços de terapia on-line."} w={"w-[390px]"} reverse={"flex-row-reverse"}/>
             <NossosServicos/>
             <ConhecaEquipe/>
-            <VenhaAgenda/>
+            <VenhaAgenda text={"Venha para NY agora mesmo."} showBtn/>
             <Footer/>
         </div>
     );

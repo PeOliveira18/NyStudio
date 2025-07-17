@@ -1,5 +1,6 @@
 import React from "react";
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+import { useState } from "react";
 
 const containerStyle = {
     width: '400px',
@@ -19,6 +20,7 @@ function FotoTexto(props) {
 
     const [map, setMap] = React.useState(null)
 
+
     const onLoad = React.useCallback(function callback(map) {
         map.setCenter(center);
         setMap(map);
@@ -28,11 +30,12 @@ function FotoTexto(props) {
         setMap(null)
     }, [])
 
-    const showMap = props.showMap && isLoaded;
+    const showMap = props.showMap && isLoaded
+    const showBtn = props.showBtn
 
 
     return  (
-        <div className={`flex justify-around items-center mt-20 ${props.reverse}`} data-aos="fade-zoom-on">
+        <div className={`flex justify-around items-center mt-20 ${props.reverse}`}>
                 {showMap ? (
                     <GoogleMap
                 mapContainerStyle={containerStyle}
@@ -54,9 +57,10 @@ function FotoTexto(props) {
                 ) : (
                     <img src={props.image} alt="" className="w-[400px] h-[400px]" />
                 )}         
-            <div className="w-72">
-                <h1 className="text-3xl">{props.title}</h1>
+            <div className={`${props.w} flex flex-col text-left gap-4`} data-aos="fade-zoom-on">
+                <h1 className="text-5xl">{props.title}</h1>
                 <h1 className="">{props.subtitle}</h1>
+                {showBtn && <button className="btn-preto">SAIBA MAIS</button>}
             </div>
             
         </div>

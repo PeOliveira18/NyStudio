@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
     return (  
-        <div className="flex justify-around mt-10">
+        <div className="flex justify-around my-10">
             <div className="flex flex-col gap-4">
                 <h1 className="text-xl">Mantenha o contato</h1>
                 <h1>Desenvolvido por</h1>
