@@ -6,8 +6,8 @@ function VenhaAgenda(props) {
 
     return (  
         <div className="bg-[#757263] text-center mt-20 py-28">
-            <h1 className="text-5xl text-white mb-10">{props.text}</h1>
-            {showSpan && <span className="underline text-4xl text-white">Entre em contato.</span>}
+            <h1 className="text-6xl text-white mb-10">{props.text}</h1>
+            {showSpan && <span className="text-footer text-4xl text-white">Entre em contato.</span>}
             { showBtn && <button className="mt-10 btn-consulta px-16">AGENDE UMA CONSULTA</button>}
         </div>
     );

@@ -32,7 +32,7 @@ function FotoTexto(props) {
 
     const showMap = props.showMap && isLoaded
     const showBtn = props.showBtn
-
+    const showMedia = props.showMedia
 
     return  (
         <div className={`flex justify-around items-center mt-20 ${props.reverse}`}>
@@ -58,8 +58,10 @@ function FotoTexto(props) {
                     <img src={props.image} alt="" className="w-[400px] h-[400px]" />
                 )}         
             <div className={`${props.w} flex flex-col text-left gap-4`} data-aos="fade-zoom-on">
-                <h1 className="text-5xl">{props.title}</h1>
-                <h1 className="">{props.subtitle}</h1>
+                <h1>{props.role}</h1>
+                <h1 className="text-6xl">{props.title}</h1>
+                <h1 className="text-[25px]">{props.subtitle}</h1>
+                {showMedia && <div className="flex gap-2"> <a>Instagram</a> <h1> - </h1> <a>Email</a> </div>}
                 {showBtn && <button className="btn-preto">SAIBA MAIS</button>}
             </div>
             

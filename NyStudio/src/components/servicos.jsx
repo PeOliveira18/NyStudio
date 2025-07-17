@@ -6,19 +6,19 @@ function Servicos() {
         <div className="flex justify-around my-10">
             <div className="servico-container">
                 <img src={foto} alt="" className="img-servicos" />
-                <h1>Terapia</h1>
+                <h1 className="texto-servicos">Terapia</h1>
             </div>
             <div className="servico-container">
                 <img src={foto} alt="" className="img-servicos" />
-                <h1>Terapia</h1>
+                <h1 className="texto-servicos">Terapia</h1>
             </div>
             <div className="servico-container">
                 <img src={foto} alt="" className="img-servicos" />
-                <h1>Terapia</h1>
+                <h1 className="texto-servicos">Terapia</h1>
             </div>
             <div className="servico-container">
                 <img src={foto} alt="" className="img-servicos" />
-                <h1>Terapia</h1>
+                <h1 className="texto-servicos">Terapia</h1>
             </div>
         </div>
     );
