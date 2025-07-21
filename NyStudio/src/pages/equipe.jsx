@@ -15,7 +15,7 @@ function Equipe() {
 
     return (  
         <div className="flex flex-col" data-aos="fade-zoom-on">
-            <div className="flex flex-col h-screen w-full bg-cover bg-center text-white" style={{backgroundImage: `url(${foto2})`}}>
+            <div className="flex flex-col h-screen w-screen bg-cover bg-center text-white" style={{backgroundImage: `url(${foto2})`}}>
                 <Header/>
                 <div className="flex m-auto max-w-[650px] text-center">
                     <h1 className="text-5xl">Por trás de cada conquista, uma equipe extraordinária. Conheça quem faz tudo acontecer.</h1>

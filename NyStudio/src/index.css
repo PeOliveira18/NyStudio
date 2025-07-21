@@ -19,7 +19,7 @@
     }
 
     .btn-consulta{
-        @apply bg-[#E1CCBE] px-10 py-3 text-[17px] hover:opacity-70 cursor-pointer text-black
+        @apply bg-[#D4967D] px-10 py-3 text-[17px] hover:opacity-70 cursor-pointer text-black
     }
 
     .btn-preto{
@@ -37,4 +37,14 @@
     .texto-equipe{
         @apply text-[27px]
     }
+
+    .texto-modal{
+        @apply text-[47px] text-[#3F4A49] 
+    }
+
+    .forms{
+        @apply block bg-[#FCFCFC] border-[1px] border-[#A9A9A9] mb-8 mt-2  w-[512px] 
+    }
+
+    
 }

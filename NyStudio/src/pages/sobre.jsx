@@ -16,7 +16,7 @@ function Sobre() {
 
     return (  
         <div className="flex flex-col" data-aos="fade-zoom-on">
-            <div className="flex flex-col h-screen w-full bg-cover bg-center text-white" style={{backgroundImage: `url(${foto})`}}>
+            <div className="flex flex-col min-h-screen w-screen bg-cover bg-center text-white opacity-80" style={{backgroundImage: `url(${foto})`}}>
                 <Header/>
                 <div className="flex m-auto max-w-[800px] text-center">
                     <h1 className="text-6xl">Queremos que você receba os cuidados que merece.</h1>
