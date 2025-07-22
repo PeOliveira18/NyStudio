@@ -15,13 +15,13 @@ function Equipe() {
 
     return (  
         <div className="flex flex-col" data-aos="fade-zoom-on">
-            <div className="flex flex-col h-screen w-screen bg-cover bg-center text-white" style={{backgroundImage: `url(${foto2})`}}>
+            <div className="flex flex-col h-screen w-full bg-cover bg-center text-white opacity-80" style={{backgroundImage: `url(${foto2})`}}>
                 <Header/>
-                <div className="flex m-auto max-w-[650px] text-center">
-                    <h1 className="text-5xl">Por trás de cada conquista, uma equipe extraordinária. Conheça quem faz tudo acontecer.</h1>
+                <div className="flex m-auto lg:max-w-[850px] max-w-[700px] text-center">
+                    <h1 className="lg:text-6xl sm:text-5xl text-4xl lg:px-0 px-7">Por trás de cada conquista, uma equipe extraordinária.</h1>
                 </div>
             </div>
-            <FotoTexto role={"Fotografa"} title={"Nathalia Oliveira"} subtitle={"Tudo começa com uma ideia. Talvez você queira abrir um negócio. Talvez você queira transformar um passatempo em algo mais sério. Ou talvez você tenha um projeto criativo para compartilhar com o mundo. Seja o que for, o modo de contar sua história on-line faz toda a diferença"} media1={"Instagram"} media2={"Email"} w={"w-[400px]"} showMedia/>
+            <FotoTexto role={"Fotografa"} title={"Nathalia Oliveira"} subtitle={"Tudo começa com uma ideia. Talvez você queira abrir um negócio. Talvez você queira transformar um passatempo em algo mais sério. Ou talvez você tenha um projeto criativo para compartilhar com o mundo. Seja o que for, o modo de contar sua história on-line faz toda a diferença"} media1={"Instagram"} media2={"Email"} w={"w-[500px]"} reverse={"flex-row"} showMedia/>
             <FotoTexto role={"Fotografo"} title={"Yuri Pauletto"} subtitle={"Tudo começa com uma ideia. Talvez você queira abrir um negócio. Talvez você queira transformar um passatempo em algo mais sério. Ou talvez você tenha um projeto criativo para compartilhar com o mundo. Seja o que for, o modo de contar sua história on-line faz toda a diferença"} media1={"Instagram"} media2={"Email"} w={"w-[400px]"} reverse={"flex-row-reverse"} showMedia/>
             <VenhaAgenda text={"Venha para NY hoje mesmo"} showBtn/>
             <Footer/>

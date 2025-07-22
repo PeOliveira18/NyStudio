@@ -1,6 +1,6 @@
 import Header from "../components/header";
 import React, { useEffect } from "react";
-import estudio from '../images/estudio2.png'
+import estudio from '../images/estudio.jpg'
 import AOS from "aos";
 import FotoTexto from "../components/foto-texto";
 import NossosServicos from "../components/nossos-servicos";
@@ -16,7 +16,7 @@ function Home() {
 
     return (  
         <div className="flex flex-col">
-            <div className="flex flex-col h-screen w-full bg-cover bg-center text-white opacity-80" style={{backgroundImage: `url(${estudio})`}}>
+            <div className="flex flex-col h-screen w-full bg-cover bg-no-repeat bg-center text-white " style={{backgroundImage: `url(${estudio})`}}>
                 <Header/>
                 <div className="max-w-[750px] flex flex-col  gap-7 my-auto p-7">
                     <h1 className="text-6xl leading-16">Conheca NyStudio, um estudio de audio visual.</h1>

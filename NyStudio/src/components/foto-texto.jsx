@@ -35,7 +35,7 @@ function FotoTexto(props) {
     const showMedia = props.showMedia
 
     return  (
-        <div className={`flex justify-around items-center mt-20 ${props.reverse}`}>
+        <div className={`flex lg:${props.reverse} flex-col gap-10 justify-around items-center mt-20`}>
                 {showMap ? (
                     <GoogleMap
                 mapContainerStyle={containerStyle}
@@ -57,7 +57,7 @@ function FotoTexto(props) {
                 ) : (
                     <img src={props.image} alt="" className="w-[400px] h-[400px]" />
                 )}         
-            <div className={`${props.w} flex flex-col text-left gap-4`} data-aos="fade-zoom-on">
+            <div className={`${props.w} flex flex-col lg:text-left text-center lg:items-start items-center gap-4`} data-aos="fade-zoom-on">
                 <h1>{props.role}</h1>
                 <h1 className="text-6xl">{props.title}</h1>
                 <h1 className="text-[25px]">{props.subtitle}</h1>

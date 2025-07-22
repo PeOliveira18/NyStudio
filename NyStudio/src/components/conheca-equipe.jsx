@@ -1,5 +1,5 @@
 import React from "react";
-import foto from '../images/estudio2.png'
+import foto from '../images/estudio.jpg'
 
 function ConhecaEquipe() {
     return (  
