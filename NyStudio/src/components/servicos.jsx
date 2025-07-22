@@ -3,23 +3,13 @@ import foto from '../images/cadeira.png'
 
 function Servicos() {
     return (
-        <div className="flex justify-around my-10">
-            <div className="servico-container">
-                <img src={foto} alt="" className="img-servicos" />
-                <h1 className="texto-servicos">Terapia</h1>
-            </div>
-            <div className="servico-container">
-                <img src={foto} alt="" className="img-servicos" />
-                <h1 className="texto-servicos">Terapia</h1>
-            </div>
-            <div className="servico-container">
-                <img src={foto} alt="" className="img-servicos" />
-                <h1 className="texto-servicos">Terapia</h1>
-            </div>
-            <div className="servico-container">
-                <img src={foto} alt="" className="img-servicos" />
-                <h1 className="texto-servicos">Terapia</h1>
-            </div>
+        <div className="flex flex-wrap justify-center gap-10 my-10 px-4">
+            {[1, 2, 3, 4].map((item, index) => (
+                <div key={index} className="servico-container max-w-[200px] text-center">
+                    <img src={foto} alt="Serviço" className="img-servicos w-full h-auto object-contain" />
+                    <h1 className="texto-servicos mt-4 text-lg font-semibold">Terapia</h1>
+                </div>
+            ))}
         </div>
     );
 }

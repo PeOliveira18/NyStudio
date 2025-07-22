@@ -3,8 +3,8 @@ import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 import { useState } from "react";
 
 const containerStyle = {
-    width: '400px',
-    height: '400px',
+    width: '600px',
+    height: '600px',
 }
 
 const center = {
@@ -33,36 +33,39 @@ function FotoTexto(props) {
     const showMap = props.showMap && isLoaded
     const showBtn = props.showBtn
     const showMedia = props.showMedia
+    const reverse = props.reverse
 
     return  (
-        <div className={`flex lg:${props.reverse} flex-col gap-10 justify-around items-center mt-20`}>
+        <div className={`flex lg:${reverse ? 'flex-row-reverse' : 'flex-row'} flex-col gap-10 px-5 justify-around items-center text-center mt-20`}>
                 {showMap ? (
-                    <GoogleMap
-                mapContainerStyle={containerStyle}
-                center={center}
-                onLoad={onLoad}
-                zoom={17}
-                onUnmount={onUnmount}
-                options={{
-                    mapTypeControl: false, 
-                    fullscreenControl: false, 
-                    streetViewControl: false,
-                    zoomControl: false,
-                    gestureHandling:"greedy",
-                }}
-            >
-                <Marker position ={center}/>
-                <></>
-            </GoogleMap>
+                    <div className="w-full max-w-[500px] aspect-[1/1] rounded-md shadow-lg overflow-hidden">
+                        <GoogleMap
+                                        mapContainerStyle={containerStyle}
+                                        center={center}
+                                        onLoad={onLoad}
+                                        zoom={17}
+                                        onUnmount={onUnmount}
+                                        options={{
+                        mapTypeControl: false,
+                        fullscreenControl: false,
+                        streetViewControl: false,
+                        zoomControl: false,
+                        gestureHandling:"greedy",
+                                        }}
+                                    >
+                                        <Marker position ={center}/>
+                                        <></>
+                                    </GoogleMap>
+                    </div>
                 ) : (
-                    <img src={props.image} alt="" className="w-[400px] h-[400px]" />
+                    <img src={props.image} alt="" className="max-w-[500px] w-full h-auto rounded-md shadow-lg" />
                 )}         
-            <div className={`${props.w} flex flex-col lg:text-left text-center lg:items-start items-center gap-4`} data-aos="fade-zoom-on">
+            <div className={`${props.w} w-full h-auto flex flex-col lg:text-left text-center gap-4 px-5`} data-aos="fade-zoom-on">
                 <h1>{props.role}</h1>
-                <h1 className="text-6xl">{props.title}</h1>
+                <h1 className="md:text-6xl text-4xl">{props.title}</h1>
                 <h1 className="text-[25px]">{props.subtitle}</h1>
                 {showMedia && <div className="flex gap-2"> <a>Instagram</a> <h1> - </h1> <a>Email</a> </div>}
-                {showBtn && <button className="btn-preto">SAIBA MAIS</button>}
+                {showBtn && <div><button className="btn-preto">SAIBA MAIS</button></div>}
             </div>
             
         </div>
