@@ -36,7 +36,7 @@ function FotoTexto(props) {
     const reverse = props.reverse
 
     return  (
-        <div className={`flex lg:${reverse ? 'flex-row-reverse' : 'flex-row'} flex-col gap-10 px-5 justify-around items-center text-center mt-20`}>
+        <div className={`flex ${reverse ? 'flex-col lg:flex-row-reverse' : 'flex-col lg:flex-row'} flex-col gap-10 px-5 justify-around items-center text-center mt-20`}>
                 {showMap ? (
                     <div className="w-full max-w-[500px] aspect-[1/1] rounded-md shadow-lg overflow-hidden">
                         <GoogleMap

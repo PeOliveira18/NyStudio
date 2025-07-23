@@ -15,11 +15,12 @@ function Servicos() {
 
     return (  
         <div className="flex flex-col" data-aos="fade-zoom-on">
-            <div className="flex flex-col h-screen w-full bg-cover bg-center text-white opacity-80" style={{backgroundImage: `url(${foto})`}}>
+            <div className="flex flex-col h-screen w-full bg-cover bg-center text-white relative" style={{backgroundImage: `url(${foto})`}}>
                 <Header/>
-                <div className="flex m-auto lg:max-w-[890px] max-w-[700px] text-center ">
+                <div className="flex m-auto lg:max-w-[890px] max-w-[700px] text-center z-10">
                     <h1 className="lg:text-6xl sm:text-5xl text-4xl lg:px-0 px-7">Receba os devidos cuidados para todas as suas necessidades de saúde mental.</h1>
                 </div>
+                <div className="absolute inset-0 bg-black/30"></div>
             </div>
             <div className="m-auto text-6xl my-10 text-center">
                 <h1>Nossos Serviços</h1>

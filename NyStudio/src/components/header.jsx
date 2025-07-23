@@ -41,7 +41,7 @@ function Header() {
 
     return (
         <>
-            <header className="px-14 py-7 flex justify-between items-center">
+            <header className="px-14 py-7 flex justify-between items-center z-10">
                 <div className="flex items-end gap-10">
                     <Link to='/'>
                         <h1 className={`text-4xl ${selecionado === 0 ? '' : ''}`} onClick={() => mudaSelecao(0)}>Ny Studio</h1>

@@ -16,11 +16,12 @@ function Equipe() {
 
     return (  
         <div className="flex flex-col" data-aos="fade-zoom-on">
-            <div className="flex flex-col h-screen w-full bg-cover bg-center text-white opacity-80" style={{backgroundImage: `url(${foto2})`}}>
+            <div className="flex flex-col h-screen w-full bg-cover bg-center text-white relative" style={{backgroundImage: `url(${foto2})`}}>
                 <Header/>
-                <div className="flex m-auto lg:max-w-[850px] max-w-[700px] text-center">
+                <div className="flex m-auto lg:max-w-[850px] max-w-[700px] text-center z-10">
                     <h1 className="lg:text-6xl sm:text-5xl text-4xl lg:px-0 px-7">Por trás de cada conquista, uma equipe extraordinária.</h1>
                 </div>
+                <div className="absolute inset-0 bg-black/30"></div>
             </div>
             <FotoTexto role={"Fotografa"} title={"Nathalia Oliveira"} subtitle={"Tudo começa com uma ideia. Talvez você queira abrir um negócio. Talvez você queira transformar um passatempo em algo mais sério. Ou talvez você tenha um projeto criativo para compartilhar com o mundo. Seja o que for, o modo de contar sua história on-line faz toda a diferença"} media1={"Instagram"} media2={"Email"} w={"max-w-[500px]"} showMedia image={foto}/>
             <FotoTexto role={"Fotografo"} title={"Yuri Pauletto"} subtitle={"Tudo começa com uma ideia. Talvez você queira abrir um negócio. Talvez você queira transformar um passatempo em algo mais sério. Ou talvez você tenha um projeto criativo para compartilhar com o mundo. Seja o que for, o modo de contar sua história on-line faz toda a diferença"} media1={"Instagram"} media2={"Email"} w={"max-w-[500px]"} reverse showMedia image={foto}/>

@@ -38,6 +38,10 @@
         @apply text-[27px]
     }
 
+    .texto-titulo{
+        @apply text-[68px]
+    }
+
     .texto-modal{
         @apply text-[47px] text-[#3F4A49] 
     }
