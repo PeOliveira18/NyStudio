@@ -26,7 +26,7 @@ function Home() {
                     <Header />
                 </div>
                 <div className="relative z-10 flex flex-col justify-center h-full px-6 sm:px-10 md:px-20 max-w-6xl mt-28">
-                    <h1 className="text-4xl sm:text-5xl md:text-[68px] font-semibold leading-tight max-w-2xl">Conheça NyStudio, um estúdio de audiovisual.</h1>
+                    <h1 className="text-4xl sm:text-5xl md:text-[68px] font-semibold leading-tight max-w-3xl">Conheça NyStudio, um estúdio de audiovisual.</h1>
                     <p className="mt-6 text-base sm:text-lg md:text-2xl max-w-xl">Receba cuidados médicos de saúde mental acessíveis e personalizadospresencialmente ou no aconchego de sua casa.</p>
                 </div>
             </div>

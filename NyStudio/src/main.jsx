@@ -10,34 +10,55 @@ import Servicos from './pages/servicos.jsx'
 import Equipe from './pages/equipe.jsx'
 import Blog from './pages/blog.jsx'
 import Contato from './pages/contato.jsx'
+import PageBlog1 from './pages/page-blog1.jsx'
+import PageBlog2 from './pages/page-blog2.jsx'
+import PageBlog3 from './pages/page-blog3.jsx'
+import PageBlog4 from './pages/page-blog4.jsx'
+import Layout from './components/layout.jsx'
 
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home/>
+    element: <Layout><Home /></Layout>
   },
   {
     path: '/Sobre',
-    element: <Sobre/>
+    element: <Layout><Sobre /></Layout>
   },
   {
     path: '/Servicos',
-    element: <Servicos/>
+    element: <Layout><Servicos /></Layout>
   },
   {
     path: '/Equipe',
-    element: <Equipe/>
+    element: <Layout><Equipe /></Layout>
   },
   {
     path: '/Blog',
-    element: <Blog/>
+    element: <Layout><Blog /></Layout>
   },
   {
     path: '/Contato',
-    element: <Contato/>
+    element: <Layout><Contato /></Layout>
   },
-])
+  {
+    path: '/PageBlog1',
+    element: <Layout><PageBlog1 /></Layout>
+  },
+  {
+    path: '/PageBlog2',
+    element: <Layout><PageBlog2 /></Layout>
+  },
+  {
+    path: '/PageBlog3',
+    element: <Layout><PageBlog3 /></Layout>
+  },
+  {
+    path: '/PageBlog4',
+    element: <Layout><PageBlog4 /></Layout>
+  },
+]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

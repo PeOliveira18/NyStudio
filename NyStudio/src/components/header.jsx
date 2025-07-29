@@ -4,6 +4,11 @@ import { Bars2Icon, Bars3Icon, XMarkIcon } from "@heroicons/react/20/solid";
 import AOS from "aos";
 
 function Header() {
+
+    const numero = "5511943436457"
+    const mensagem = "Ola, queria saber mais sobre os servicos."
+    const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`
+
     useEffect(() => {
             AOS.init({duration: 1000})
         }, [])
@@ -67,7 +72,7 @@ function Header() {
                     </nav>
                 </div>
                 <div className="items-end lg:flex hidden">
-                    <button className="btn-consulta px-5 py-5 hover:opacity-80">COMECE AGORA</button>
+                    <a href={link} target="_blank" rel="noopener noreferrer"><button className="btn-consulta px-5 py-5 hover:opacity-80">COMECE AGORA</button></a>
                 </div>
                 <div className="lg:hidden flex items-end z-50">
                     <button

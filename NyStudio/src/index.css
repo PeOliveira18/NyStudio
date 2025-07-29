@@ -11,7 +11,7 @@
     }
 
     .img-equipe{
-        @apply w-[260px] h-[374px]
+        @apply w-[260px] h-[374px] rounded-md shadow-lg
     }
 
     .text-footer{
