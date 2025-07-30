@@ -85,7 +85,7 @@ function Header() {
                 
             </header>
             {open && (
-                    <div className="fixed left-0 top-0 bg-white h-screen w-full flex flex-col text-black"  data-aos="fade-up">
+                    <div className="fixed left-0 top-0 bg-white h-screen w-full flex flex-col text-black z-20"  data-aos="fade-up">
                         <div className="flex items-center justify-between px-14 py-7">
                             <Link to='/'>
                                 <h1 className={`text-4xl ${selecionado === 0 ? '' : ''}`} onClick={() => mudaSelecao(0)}>Ny Studio</h1>

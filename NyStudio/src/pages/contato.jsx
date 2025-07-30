@@ -2,15 +2,56 @@ import React from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import AOS from "aos";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import emailjs from '@emailjs/browser'
+
 
 function Contato() {
+    const [nome, setNome] = useState('')
+    const [sobrenome, setSobrenome] = useState('')
+    const [email, setEmail] = useState('')
+    const [mensagem, setMensagem] = useState('')
+    const [carregando, setCarregando] = useState(false)
+    const [openDrawer, setOpenDrawer] = useState(false)
+
+
+
+    function sendEmail(e) {
+        e.preventDefault()
+        setCarregando(true)
+
+        const templateParams = {
+            from_name: nome,
+            from_sobrenome: sobrenome,
+            email: email,
+            message: mensagem
+        }
+
+        emailjs.send("service_dxmukgg", "template_shs3ijb", templateParams, "htE14yKxNT8JrJ6Tr")
+            .then((res) => {
+                console.log("EMAIL ENVIADO", res.status, res.text)
+                console.log(`Nome: ${nome}`);
+                console.log(`Sobrenome: ${sobrenome}`);
+                console.log(`Email: ${email}`);
+                console.log(`Mensagem: ${mensagem}`);
+
+                setNome('')
+                setSobrenome('')
+                setEmail('')
+                setMensagem('')
+                setCarregando(false)
+                setOpenDrawer(true)
+            }, (err) => {
+                console.log("ERRO", err)
+            })
+    }
+
     useEffect(() => {
-                    AOS.init({duration: 1000})
-                }, [])
-    return (  
+        AOS.init({ duration: 1000 })
+    }, [])
+    return (
         <div>
-            <Header/>
+            <Header />
             <div className="grid md:grid-cols-2 grid-cols-1 mt-36 h-screen px-5 mb-44" data-aos="fade-zoom-on">
                 <div className="flex flex-col px-5">
                     <h1 className="text-6xl">Fale conosco</h1>
@@ -27,32 +68,49 @@ function Contato() {
                     </div>
                 </div>
                 <div className="flex flex-col px-5 w-full max-w-4xl sm:mt-0 mt-10">
-                    <form action="">
+                    <form id="forms" onSubmit={sendEmail}>
                         <div className="flex gap-3 sm:flex-row flex-col">
                             <div className="flex-1">
                                 <label htmlFor="">Nome</label>
-                                <input type="text" className="forms h-12 w-full"/>
+                                <input type="text" className="forms h-12 w-full" required id="nome" onChange={(e) => setNome(e.target.value)} value={nome} />
                             </div>
                             <div className="flex-1">
                                 <label htmlFor="">Sobrenome</label>
-                                <input type="text" className="forms h-12 w-full"/>
+                                <input type="text" className="forms h-12 w-full" required id="sobrenome" onChange={(e) => setSobrenome(e.target.value)} value={sobrenome} />
                             </div>
                         </div>
                         <div>
                             <label htmlFor="">E-mail <span className="font-light">(obrigatorio)</span></label>
-                            <input type="email" className="forms h-12 w-full"/>
+                            <input type="email" className="forms h-12 w-full" required id="email" onChange={(e) => setEmail(e.target.value)} value={email} />
                         </div>
                         <div>
                             <label htmlFor="">Mensagem</label>
-                            <textarea name="" id="" className="forms w-full" rows="5"></textarea>
+                            <textarea name="" id="mensagem" required onChange={(e) => setMensagem(e.target.value)} value={mensagem} className="forms w-full" rows="5"></textarea>
                         </div>
                         <div>
-                            <button type="submit" className="btn-consulta px-12 py-6">ENVIAR</button>
+                            <button type="submit" className="btn-consulta px-12 py-6" disabled={carregando}>
+                                {carregando ? (
+                                    <svg className="animate-spin h-5 w-5 mr-3 text-white"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path></svg>
+                                ) : (
+                                    "Enviar"
+                                )}
+                            </button>
                         </div>
                     </form>
                 </div>
             </div>
-            <Footer/>
+            {openDrawer && (
+                <div className="fixed inset-0 bg-[#FFF2FF] opacity-90 z-50 flex items-center justify-center" onClick={() => setOpenDrawer(false)} data-aos="fade-zoom-on">
+                    <div className="bg-gray-400 max-w-[500px] w-full h-auto rounded-xl shadow-lg text-center px-6 py-56 text-black font-extrabold" onClick={(e) => e.stopPropagation()}>
+                        <h1>Email enviado com sucesso</h1>
+                    </div>
+                </div>
+            )}
+
+            <Footer />
         </div>
     );
 }
